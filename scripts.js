@@ -15,19 +15,20 @@ function createGameBoard()
     
 
     let cells = document.querySelectorAll("td");
-    //let squareBrackets = '<button id= 'edit-btn'>[ ]</button>';
+    let squareBrackets = `<button id= 'edit-btn'>[ ]</button>`;
 
     for(let c = 0;c < cells.length;c++){
-       // cells[c].innerHTML = '[    ]';
+       cells[c].innerHTML = squareBrackets;
     }
+}
     // Programatically add a button with square brackets enclosing an empty space to each cell in the gameboard
-   let btns = document.querySelectorAll('button');
+   
 
-   for (let c=0; c < bts.length;c++)
+   /*for (let c=0; c < bts.length;c++)
    {
        btns[c].addEventListener('click',(event) => {takeCell(event)});
-   }
-}
+   }*/
+
 
 // Programatically add 'takeCell' as an event listener to all the buttons on the board
 let btns = document.querySelectorAll('button');
