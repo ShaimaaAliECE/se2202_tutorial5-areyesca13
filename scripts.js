@@ -1,14 +1,11 @@
 let nextPlayer = 'X'; // takes a value of either 'X' or 'O' according to the game turns
 
 //initialize the game
-var startButton = document.createElement('button');
-startButton.innerText = 'Start Game';
-//document.getElementById()
-startButton.addEventListener('click', (event) => {InEvent.target.hidden = true;});
+
+
 // use the value stored in the nextPlayer variable to indicate who the next player is
-let thisPlayer = document.querySelector('a')
-let Playertxt = 'Next Player';
-thisPlayer.innerText = Playertxt;
+let nPlayer = document.querySelector("#next-lbl");
+nPlayer.innerHTML = nextPlayer;
 
 //This call will create the buttons needed for the gameboard.
 createGameBoard()
@@ -17,14 +14,19 @@ function createGameBoard()
 {
     //let cells = document.querySelectorAll("");
 
-    for (let c = 0;c< 9; c++){
-        let cID = 'c' + (c+1);
-        var newButton = document.createElement('button');
-        document.getElementById(cID).appendChild(newButton);
-        
+    let cells = document.querySelectorAll("td");
+    //let squareBrackets = '<button id= 'edit-btn'>[ ]</button>';
+
+    for(let c = 0;c < cells.length;c++){
+        cells[c].innerHTML = '[  ]';
     }
     // Programatically add a button with square brackets enclosing an empty space to each cell in the gameboard
-   
+   let btns = document.querySelectorAll('button');
+
+   for (let c=0; c < bts.length;c++)
+   {
+       btns[c].addEventListener('click',(event) => {takeCell(event)});
+   }
 }
 
 // Programatically add 'takeCell' as an event listener to all the buttons on the board
