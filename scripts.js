@@ -55,7 +55,7 @@ function takeCell(event)
         else if (nextPlayer === 'O'){
 
             clickbtn.innerText = "[" + nextPlayer + "]";
-            nextPlayer = 'X';
+            nextPlayer = 'O';
             clickbtn.disabled = true;
             nextPlayerL.innerHTML = nextPlayer;
 
