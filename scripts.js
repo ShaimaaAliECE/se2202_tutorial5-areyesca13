@@ -13,14 +13,10 @@ createGameBoard()
 function createGameBoard()
 {
     let cells = document.querySelectorAll("td");
+    let squareBrackets = `<button id='edit-btn'>[]</button>`;
+    
 
-    for(let i=0;i<9;i++){
-        newButton = document.createElement('button');
-        document.getElementById(cell[i]).appendChild(newButton);
-    }
-
-    let cells = document.querySelectorAll("td");
-    let squareBrackets = `<button id= 'edit-btn'>[ ]</button>`;
+    
 
     for(let i = 0;i < cells.length;i++){
        cells[i].innerHTML = squareBrackets;
@@ -55,13 +51,15 @@ function takeCell(event)
 
         if (nextPlayer === 'X'){
             clickbtn.innerText = "[" + nextPlayer + "]";
+            nextPlayer = "O";
+            clickbtn.disabled = true;
             nextPlayerL.innerHTML = nextPlayer;
         }
 
         else if (nextPlayer === 'O'){
 
             clickbtn.innerText = "[" + nextPlayer + "]";
-            nextPlayer = 'O';
+            nextPlayer = 'X';
             clickbtn.disabled = true;
             nextPlayerL.innerHTML = nextPlayer;
 
