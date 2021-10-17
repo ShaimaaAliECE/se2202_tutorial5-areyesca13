@@ -13,9 +13,7 @@ createGameBoard()
 function createGameBoard()
 {
     let cells = document.querySelectorAll("td");
-    let squareBrackets = `<button id='edit-btn'>[]</button>`;
-    
-
+    let squareBrackets = `<button id='edit-btn'>[ ]</button>`;
     
 
     for(let i = 0;i < cells.length;i++){
