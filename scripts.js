@@ -26,11 +26,7 @@ function createGameBoard()
     // Programatically add a button with square brackets enclosing an empty space to each cell in the gameboard
    
 
-   for (let c=0; c < bts.length;c++)
-   {
-       btns[c].addEventListener('click',(event) => {takeCell(event)});
-   }
-
+   
 
 // Programatically add 'takeCell' as an event listener to all the buttons on the board
 let btns = document.querySelectorAll('button');
@@ -83,7 +79,7 @@ function isGameOver()
 {
    let disbtnscnt = 0;
    for (i in btns){
-       if(btns[i].disabled == true){
+       if(btns[i].disabled === true){
            disbtnscnt++;
        }
    }
